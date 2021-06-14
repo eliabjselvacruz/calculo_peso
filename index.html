@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div style="display: flex; flex-direction: column; align-items: center;">
+        <div style="width: 500px;">
+            <div class="card blue white-text center">
+                <h3>Peso recomendado</h3>
+            </div>
+            <div class="row">
+                <form class="col s12" id="formulario">
+                    <div class="row">
+                        <div class="input-field col s6">
+                            <input  name="nombre" type="text">
+                            <label for="nombre">Nombre</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input name="edad" type="number" min="1" max="120">
+                            <label for="edad">Edad</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input  name="cedula" type="text">
+                            <label for="cedula">Cedula</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <div class="row">
+                                <div class="col s6">
+                                    <p>
+                                        <label>
+                                            <input name="sexo" type="radio" />
+                                            <span>Mujer</span>
+                                        </label>
+                                    </p>
+                                </div>
+                                <div class="col s6">
+                                    <p>
+                                        <label>
+                                            <input name="sexo" type="radio" />
+                                            <span>Hombre</span>
+                                        </label>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-field col s6">
+                            <input name="peso" type="number" min="1" max="300">
+                            <label for="peso">Peso (kg)</label>
+                        </div>
+                        <div class="input-field col s6">
+                            <input name="altura" type="number" min="1" max="300">
+                            <label for="altura">Altura (cm)</label>
+                        </div>
+                        <div class="row">
+                            <div class="col s12 center">
+                                <input class="btn" type="submit" value="Calcular">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="card blue" >
+                <h4 id="resultado"></h4>
+            </div>
+        </div>
+    </div>
+
+    
+
+    <script src="./js/app.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.modal');
+            var instances = M.Modal.init(elems);
+        });
+    </script>
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+</body>
+</html>
+
